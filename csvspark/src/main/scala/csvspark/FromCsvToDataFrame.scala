@@ -12,7 +12,7 @@ object FromCsvToDataFrame {
     val conf = new SparkConf().setAppName("FromCsvToDataFrame").setMaster("local[2]")
     val sc = new SparkContext(conf)
     val sqlc = new SQLContext(sc)
-    val df = loadCsvWithHeader(sc, sqlc, "file:///Users/hasnaoui/Desktop/soft/test_Data/test_Data1.csv",',')
+    val df = loadCsvWithHeader(sc, sqlc, "test.csv",',')
     df.limit(30).show()
   }
 
